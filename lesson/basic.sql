@@ -12,11 +12,15 @@ SELECT * FROM users WHERE users.id = 1;
 -- usersテーブルから「email = "xxxxxx"」のレコードを選択
 SELECT * FROM users WHERE email = "naoko97@fujimoto.com";
 
--- usersテーブルから「email」から「.com」のレコードを選択(%を付けることで部分検索)
+-- usersテーブルから「email」から「.com」のレコードを選択(部分一致 %)
 SELECT * FROM users WHERE email LIKE "%.com%";
 
+-- usersテーブルから「email」から「.com」のレコードを選択(後方一致)
 SELECT * FROM users WHERE email LIKE "%.com"; 
 -- ↑「.com」は最後につくものなので%は前だけでも良い)
+
+-- usersテーブルから「email」から「ry」で始まるレコードを選択(前方一致)
+SELECT * FROM users WHERE email LIKE "ry%"; 
 
 -- usersテーブルから「id >= 5」のレコードを選択
 SELECT * FROM users WHERE id >= 5;
@@ -49,3 +53,12 @@ SELECT email FROM users ORDER BY email ASC;
 -- usersテーブルで、「gender」の値の順、idが大きい順(左の構文から優先)
 SELECT * FROM users ORDER BY gender ASC, id DESC;
 -- ※ アルファベット順 F(female) → M(male)
+
+-- usersテーブルから、最初の10件を選択
+SELECT * FROM users LIMIT 10;
+
+-- usersテーブルから、11 - 20件を選択
+SELECT * FROM users LIMIT 10 OFFSET 10;
+
+-- usersテーブルから、21 - 30件を選択
+SELECT * FROM users LIMIT 10 OFFSET 20;
