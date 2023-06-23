@@ -25,8 +25,26 @@ SELECT
     AVG(price) AS average_price
     FROM items;
 
--- 「items」テーブルの総合計金額(「price × stock」の合計)
+-- 「items」テーブルの総合計金額 (「price × stock」の合計)
 SELECT
     SUM(price * stock) AS total_price,
     AVG(price * stock) AS average_price
+    FROM items;
+
+-- 「items」テーブルの「price」の最大値、最小値 (カラムは指定できない)
+SELECT
+    MAX(price) AS max_price,
+    MIN(price) AS min_price
+    FROM items;
+
+-- 「items」テーブルの「price」の税抜き価格
+SELECT 
+    code,
+    price, 
+    ROUND(price / 1.1) AS price_without_tax 
+    FROM items;
+
+SELECT 
+    *, 
+    ROUND(price / 1.1) AS price_without_tax 
     FROM items;
