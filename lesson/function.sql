@@ -21,7 +21,7 @@ SELECT AVG(price) AS average_price FROM items;
 --「items」テーブルのレコード数と「price」の合計金額と平均金額を取得
 SELECT 
     COUNT(id) AS item_count,
-    SUM(price) AS total_price ,
+    SUM(price) AS total_price,
     AVG(price) AS average_price
     FROM items;
 
