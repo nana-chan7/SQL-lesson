@@ -28,8 +28,10 @@ SQL
 
        ・SELECT: テーブルのレコードを選択
                 SELECT * FROM テーブル名;
-       ・INSERT
-        UPDATE DELETE
+       ・INSERT: レコードの挿入
+                INSERT INTO テーブル名 (カラムの定義) VALUES (データ);
+        ・UPDATE: 
+        ・DELETE:
 
 条件 
 ・データを検索するときに条件を指定する構文

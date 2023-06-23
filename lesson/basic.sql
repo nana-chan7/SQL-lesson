@@ -1,3 +1,5 @@
+-- 2023-06-23 2.week2
+
 -- usersテーブルからすべてのレコードを選択
 SELECT * FROM users;
 
