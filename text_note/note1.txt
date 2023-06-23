@@ -30,8 +30,10 @@ SQL
                 SELECT * FROM テーブル名;
        ・INSERT: レコードの挿入
                 INSERT INTO テーブル名 (カラムの定義) VALUES (データ);
-        ・UPDATE: 
-        ・DELETE:
+        ・UPDATE: レコードを更新
+                UPDATE テーブル名 SET ~~~
+        ・DELETE: レコードを削除
+                DELETE FROM テーブル名 ~~~
 
 条件 
 ・データを検索するときに条件を指定する構文
@@ -49,3 +51,5 @@ SQL
 % : 部分一致に使う
 
 ※ すべて小文字でも動くが、SQLの正しい書き方は予約の文字は大文字にする
+
+
