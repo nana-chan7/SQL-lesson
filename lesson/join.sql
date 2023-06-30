@@ -27,8 +27,9 @@ FROM users
 INNER JOIN user_items ON user_items.user_id = users.id;
 
 --------------------------------------------------------------------------------
--- LEFT JOIN (外部結合)
+-- OUTER JOIN (外部結合)
 
+-- LEFT JOIN 
 -- user_itemsを基準に usersと結合(LEFT)
 SELECT
     users.id,
@@ -48,3 +49,25 @@ SELECT
     user_items.created_at
 FROM users
 LEFT JOIN user_items ON user_items.user_id = users.id;
+
+-- RIGHT JOIN 
+-- user_itemsを基準に usersと結合(RIGHT)
+SELECT
+    users.id,
+    users.name,
+    user_items.item_id,
+    user_items.amount,
+    user_items.created_at
+FROM user_items
+RIGHT JOIN users ON user_items.user_id = users.id;
+
+-- usersを基準に user_itemsと結合(RIGHT)
+SELECT
+    users.id,
+    users.name,
+    user_items.item_id,
+    user_items.amount,
+    user_items.created_at
+FROM users
+RIGHT JOIN user_items ON user_items.user_id = users.id;
+
