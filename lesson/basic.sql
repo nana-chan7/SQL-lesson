@@ -50,6 +50,7 @@ SELECT * FROM users WHERE NOT(id = 5);
 SELECT * FROM users ORDER BY id DESC;
 
 -- usersテーブルで、「email」のアルファベット順(昇順△)に並べる ※ASC: ascending(昇順)
+-- ※ 何も書かれない場合は昇順になる
 SELECT email FROM users ORDER BY email ASC;
 
 -- usersテーブルで、「gender」の値の順、idが大きい順(左の構文から優先)
