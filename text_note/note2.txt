@@ -1,7 +1,0 @@
-関数
-
-集約関数(Aggregate Functions)
-Aggregate Functions は複数の行からデータをまとめて計算し、単一の結果を返す
-集約関数は通常、 GROUP BY を利用してグループごとの集計結果を取得するために利用されます。
-・NOW()
-・COUNT(カラム名)
