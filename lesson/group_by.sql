@@ -87,3 +87,5 @@ GROUP BY item_id
 HAVING SUM(user_items.total_price) >= 1000
 ORDER BY user_items.id
 LIMIT 100;
+
+
