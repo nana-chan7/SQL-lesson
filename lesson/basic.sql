@@ -1,5 +1,8 @@
 -- 2023-06-23 2.week2
 
+-- CRUD
+-- Create, Read, Update, Delete
+
 -- usersテーブルからすべてのレコードを選択
 SELECT * FROM users;
 
